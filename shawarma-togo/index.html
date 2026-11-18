@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Angebot – Website & Social Media für Shawarma TOGO</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ea;--paper:#fffdf8;--ink:#1b1712;--mute:#6f6556;--line:#e6dfd2;--acc:#d9481f;--acc2:#1f6f5c;--gold:#f2b53a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+[dir=rtl] body,[dir=rtl] .serif{font-family:Cairo,system-ui,sans-serif}
+.serif{font-family:Fraunces,Georgia,serif;letter-spacing:-.02em;line-height:1.05}
+[dir=rtl] .serif{font-weight:900;letter-spacing:0;line-height:1.3}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.brand{font-weight:800;font-size:16px;white-space:nowrap;direction:ltr;display:flex;align-items:center;gap:8px}
+.brand span{display:flex;flex-direction:column;line-height:1.15}.brand small{font-size:12px;font-weight:500;color:var(--mute)}.brand i{font-family:Fraunces,Georgia,serif;font-size:16px!important;width:34px;height:34px;border-radius:10px;background:var(--ink);display:grid;place-items:center;color:var(--gold);font-style:normal;font-size:14px}
+.langs{display:flex;direction:ltr;background:var(--paper);border:1.5px solid var(--line);border-radius:99px;padding:3px;gap:2px}.langs button{border:0;background:none;border-radius:99px;padding:6px 12px;font-weight:700;font-size:13px;cursor:pointer;font-family:Inter,Cairo,sans-serif;color:var(--mute)}.langs button.on{background:var(--ink);color:#fff}.lang{border:1.5px solid var(--line);background:var(--paper);border-radius:99px;padding:7px 15px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;color:inherit}
+.hero{padding:36px 0 30px}
+.for{display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+[dir=rtl] .for{letter-spacing:0}
+h1{font-size:clamp(38px,6.2vw,72px);font-weight:800;max-width:860px}
+h1 em{font-style:italic;color:var(--acc)}
+[dir=rtl] h1 em{font-style:normal}
+.lead{font-size:clamp(16px,2vw,19px);color:var(--mute);max-width:640px;margin-top:16px}
+.gift{margin-top:26px;display:flex;gap:14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px 18px;max-width:640px}
+.gift b{font-size:26px}
+.gift p{font-size:15px}
+.gift strong{display:block}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin:34px 0 18px}
+.bar h2{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;font-size:clamp(28px,3.8vw,40px)}
+.toggle{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:6px 8px 6px 16px;cursor:pointer;user-select:none;font-weight:600;font-size:14px}
+[dir=rtl] .toggle{padding:6px 16px 6px 8px}
+.seg{display:flex;direction:ltr;gap:2px;background:#ece5d8;border-radius:99px;padding:3px}.seg button{white-space:nowrap;border:0;background:none;border-radius:99px;padding:6px 11px;font:700 13px Inter,sans-serif;color:var(--mute);cursor:pointer}.seg button.on{background:var(--acc2);color:#fff}.toggle{cursor:default;flex-wrap:wrap;max-width:100%}.lock{border:0;background:var(--ink);color:#fff;width:30px;height:30px;border-radius:50%;font-size:14px;cursor:pointer;flex:none}.dbadge{display:inline-flex;align-items:center;gap:8px;font-weight:700}.dbadge b{background:var(--acc2);color:#fff;border-radius:99px;padding:5px 12px;direction:ltr}.toggle.hid{padding:6px 8px 6px 16px}.toggle.gone{visibility:hidden}.sw{width:46px;height:28px;border-radius:99px;background:#d7cfc1;position:relative;transition:.2s;flex:none}
+.sw:after{content:"";position:absolute;top:3px;inset-inline-start:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0003;transition:.2s}
+.toggle.on .seg{display:flex;direction:ltr;gap:2px;background:#ece5d8;border-radius:99px;padding:3px}.seg button{white-space:nowrap;border:0;background:none;border-radius:99px;padding:6px 11px;font:700 13px Inter,sans-serif;color:var(--mute);cursor:pointer}.seg button.on{background:var(--acc2);color:#fff}.toggle{cursor:default;flex-wrap:wrap;max-width:100%}.lock{border:0;background:var(--ink);color:#fff;width:30px;height:30px;border-radius:50%;font-size:14px;cursor:pointer;flex:none}.dbadge{display:inline-flex;align-items:center;gap:8px;font-weight:700}.dbadge b{background:var(--acc2);color:#fff;border-radius:99px;padding:5px 12px;direction:ltr}.toggle.hid{padding:6px 8px 6px 16px}.toggle.gone{visibility:hidden}.sw{background:var(--acc2)}
+.toggle.on .sw:after{inset-inline-start:21px}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;position:relative;transition:transform .2s,box-shadow .2s;cursor:pointer}
+.plan:hover{transform:translateY(-3px);box-shadow:0 14px 40px #3a2a1214}
+.plan.sel{outline:2.5px solid var(--ink);outline-offset:-1px}
+.plan.rec{background:var(--ink);color:#fbf6ec;border-color:var(--ink)}
+.plan.rec .muted,.plan.rec .mo{color:#c9bea9}
+.plan.rec li:before{background:var(--gold);color:var(--ink)}
+.plan.rec.sel{outline-color:var(--acc)}
+.badge{position:absolute;top:-12px;inset-inline-start:22px;background:var(--acc);color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:99px;letter-spacing:.04em}
+.num{font-size:13px;font-weight:700;color:var(--acc)}
+.plan h3{font-size:28px;margin:4px 0 6px}
+.muted{color:var(--mute);font-size:14px;min-height:44px}
+.price{margin:18px 0 4px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;direction:ltr}
+[dir=rtl] .price{justify-content:flex-end}
+.price .now{font-family:Fraunces,Georgia,serif;font-size:42px;font-weight:800;letter-spacing:-.03em}
+.price s{color:#a2978a;font-size:18px;display:none}
+.disc .price s{display:inline}
+.plan.rec .price s{color:#8d836f}
+.once{font-size:13px;font-weight:600}
+.mo{font-size:14px;color:var(--mute);margin-bottom:16px;padding-bottom:16px;border-bottom:1px dashed #00000018}
+.plan.rec .mo{border-color:#ffffff22}
+.mo b{color:inherit}
+ul{list-style:none;display:grid;gap:10px;font-size:14.5px;margin-bottom:8px}
+li{display:flex;gap:10px;align-items:flex-start}
+li:before{content:"✓";flex:none;width:20px;height:20px;border-radius:50%;background:#e6f0ec;color:var(--acc2);font-size:12px;font-weight:900;display:grid;place-items:center;margin-top:1px}
+li.plus{font-weight:700}
+li.plus:before{content:"+";background:var(--gold);color:var(--ink)}
+.pick{margin-top:auto;padding-top:18px}
+.pick span{display:block;text-align:center;border-radius:14px;padding:12px;font-weight:800;font-size:15px;border:1.5px solid var(--ink)}
+.plan.rec .pick span{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.plan.sel .pick span{background:var(--acc2);border-color:var(--acc2);color:#fff}
+.inc{margin-top:16px;font-size:13.5px;color:var(--mute);text-align:center}
+section{padding:60px 0 0}
+.sh{font-size:clamp(28px,3.8vw,40px);margin-bottom:8px}
+.ss{color:var(--mute);margin-bottom:24px;max-width:620px}
+.roi{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px}
+.ctl{margin-bottom:22px}
+.ctl label{display:flex;justify-content:space-between;font-weight:600;font-size:15px;margin-bottom:10px}
+.ctl label b{font-family:Fraunces,Georgia,serif;font-size:22px;direction:ltr}
+input[type=range]{width:100%;accent-color:var(--acc);height:28px}
+.res{background:var(--acc2);color:#f2fbf7;border-radius:22px;padding:26px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.res .big{font-family:Fraunces,Georgia,serif;font-size:clamp(40px,6vw,58px);font-weight:800;line-height:1;direction:ltr}
+[dir=rtl] .res .big{text-align:right}
+.res p{opacity:.85;font-size:15px}
+.res hr{border:0;border-top:1px solid #ffffff2e}
+.res .pay{font-size:17px;font-weight:700;opacity:1}
+.adds{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.add{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.add b{white-space:nowrap;direction:ltr}
+.add span{font-size:14.5px;font-weight:600}
+.add small{display:block;color:var(--mute);font-weight:400;font-size:13px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px}
+.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--gold);font-weight:800;margin-bottom:12px}
+.step h4{font-size:16px;margin-bottom:4px}
+.step p{font-size:14px;color:var(--mute)}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px;font-size:14.5px}
+.terms div{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.terms div:before{content:"→";color:var(--acc);font-weight:800}
+[dir=rtl] .terms div:before{content:"←"}
+.cta{margin:60px 0 0;background:var(--ink);color:#fbf6ec;border-radius:28px;padding:36px 30px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{font-size:clamp(28px,4vw,42px)}
+.cta p{color:#c9bea9;margin-top:6px}
+.cta .sum{font-size:15px;color:var(--gold);font-weight:700;margin-top:10px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:14px 22px;font-weight:800;text-decoration:none;font-size:15px}
+.b1{background:var(--gold);color:var(--ink)} .b2{border:1.5px solid #ffffff40;color:#fbf6ec}
+footer{padding:30px 0 40px;color:var(--mute);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:1050px){.plans{grid-template-columns:1fr 1fr}.adds{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:400px){.brand{font-size:14px}.brand i{width:30px;height:30px}.langs button{padding:6px 9px}header{gap:8px}}
+@media (max-width:640px){
+ .plans,.adds,.roi,.terms{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr 1fr}
+
+ .muted{min-height:0}
+ .bar{flex-direction:column;align-items:flex-start}
+ .cta{padding:28px 22px}
+ .btns,.btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <div class="brand"><i>O</i><span>Othman IT Solutions<small>othmanit.dev</small></span></div>
+ <div class="langs" id="langs"><button data-l="de">DE</button><button data-l="en">EN</button><button data-l="ar">عربي</button></div>
+</header>
+
+<div class="hero">
+ <span class="for" data-i="for">Angebot für Shawarma TOGO · Dortmund</span>
+ <h1 class="serif" data-h="h1">Mehr Gäste über <em>Google, Instagram & TikTok.</em></h1>
+ <p class="lead" data-i="lead">Eine eigene Website, starke Fotos und Social Media – alles aus einer Hand. Wähle das Paket, das zu dir passt.</p>
+ <div class="gift"><b>🎁</b><p><strong data-i="gT">Gratis in jedem Paket</strong><span data-i="gD">Google-Maps-Profil optimiert: neue Titelbilder, Speisekarte & Beschreibung.</span></p></div>
+</div>
+
+<div class="bar">
+ <h2 class="serif" data-i="plansH">Die Pakete</h2>
+ <div class="toggle" id="disc"></div>
+</div>
+<div class="plans" id="plans"></div>
+<p class="inc" data-i="inc">Monatlich bei allen Paketen: Hosting, Domain, SSL-Sicherheit & kleine Änderungen (Preise, Öffnungszeiten).</p>
+
+<section>
+ <h2 class="serif sh" data-i="roiH">Rechnet sich das?</h2>
+ <p class="ss" data-i="roiS">Schieb die Regler – so schnell hat sich das Paket bezahlt gemacht.</p>
+ <div class="roi">
+  <div class="card">
+   <div class="ctl"><label><span data-i="l1">Zusätzliche Kunden pro Tag</span><b id="v1">3</b></label><input type="range" id="r1" min="1" max="20" value="3"></div>
+   <div class="ctl"><label><span data-i="l2">Durchschnittlicher Bon</span><b id="v2">9 €</b></label><input type="range" id="r2" min="5" max="20" value="9"></div>
+   <div class="ctl" style="margin:0"><label><span data-i="l3">Öffnungstage pro Monat</span><b id="v3">28</b></label><input type="range" id="r3" min="20" max="31" value="28"></div>
+  </div>
+  <div class="res">
+   <p data-i="rA">Zusätzlicher Umsatz pro Monat</p>
+   <div class="big" id="rev">756 €</div>
+   <hr>
+   <p class="pay" id="pay"></p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <h2 class="serif sh" data-i="addH">Extras</h2>
+ <p class="ss" data-i="addS">Zu jedem Paket dazubuchbar.</p>
+ <div class="adds" id="adds"></div>
+</section>
+
+<section>
+ <h2 class="serif sh" data-i="stH">So läuft's ab</h2>
+ <p class="ss" data-i="stS">Von heute bis online in etwa 2 Wochen.</p>
+ <div class="steps" id="steps"></div>
+</section>
+
+<section>
+ <h2 class="serif sh" data-i="tH">Fair & transparent</h2>
+ <div class="terms" id="terms" style="margin-top:18px"></div>
+</section>
+
+<div class="cta">
+ <div>
+  <h2 class="serif" data-i="cH">Bereit, sichtbar zu werden?</h2>
+  <p data-i="cP">Schau dir die Demo-Website an, die schon für dich vorbereitet ist.</p>
+  <p class="sum" id="sum"></p>
+ </div>
+ <div class="btns">
+  <a class="btn b1" href="https://mahmoud-x923.github.io/shawarma-togo-demo/"><span data-i="b1">Demo-Website ansehen</span> ↗</a>
+ </div>
+</div>
+
+<footer><span>Othman IT Solutions · othmanit.dev · Webdesign & Social Media · Dortmund</span><span data-i="vat">Angebot gültig 30 Tage</span></footer>
+</div>
+
+<script>
+const P=[
+{n:"Start",one:490,mo:29,de:{d:"Die eigene Website – professionell und auf dem Handy perfekt.",f:["Moderne Website (Handy & PC)","Speisekarte, Öffnungszeiten, Karte","Anruf- & WhatsApp-Button","WhatsApp-Vorbestellung","Deutsch + Arabisch","Impressum & Datenschutz (DSGVO)"]},
+ ar:{d:"موقع خاص فيك – احترافي وممتاز عالموبايل.",f:["موقع حديث (موبايل وكمبيوتر)","المنيو، أوقات الدوام، الخريطة","زر اتصال وواتساب","طلب مسبق عالواتساب","ألماني + عربي","Impressum و Datenschutz (حسب القانون)"]}},
+{n:"Sichtbar",one:790,mo:29,de:{d:"Website plus ein starker Start auf Instagram & TikTok.",plus:"Alles aus Start",f:["Fotoshooting vor Ort (2 Std.)","Instagram & TikTok einrichten","Profil, Bio, Highlights, Link","3 Posts pro Plattform"]},
+ ar:{d:"الموقع مع بداية قوية على إنستغرام وتيك توك.",plus:"كل شي بباقة Start",f:["جلسة تصوير بالمحل (ساعتين)","تجهيز إنستغرام وتيك توك","البروفايل، البايو، الهايلايت، الرابط","٣ بوستات على كل منصة"]}},
+{n:"Premium",one:1090,mo:29,rec:1,de:{d:"Jedes Gericht im besten Licht – auf Website, Google & Social Media.",plus:"Alles aus Sichtbar",f:["Profi-Fotos der ganzen Speisekarte (bis 25 Gerichte)","Speisekarte mit Fotos auf der Website","QR-Code-Speisekarte für die Tische","Neue Fotos auch im Google-Profil"]},
+ ar:{d:"كل طبق بأحلى صورة – عالموقع وغوغل والسوشال ميديا.",plus:"كل شي بباقة Sichtbar",f:["صور احترافية لكل المنيو (لحد ٢٥ طبق)","منيو بالصور عالموقع","منيو QR للطاولات","صور جديدة كمان على غوغل"]}},
+{n:"Rundum",one:1090,mo:290,min:1,de:{d:"Du kochst, ich kümmere mich um deine Online-Präsenz.",plus:"Alles aus Premium",f:["8 Posts pro Monat (davon 4 Reels/TikToks)","Monatlicher Content-Dreh vor Ort","Antworten auf Kommentare & Bewertungen","Monatlicher Kurzbericht"]},
+ ar:{d:"انت اطبخ، وأنا بهتم بحضورك أونلاين.",plus:"كل شي بباقة Premium",f:["٨ بوستات بالشهر (منهم ٤ ريلز/تيك توك)","تصوير محتوى شهري بالمحل","الرد عالتعليقات والتقييمات","تقرير شهري مختصر"]}}];
+const AD={de:[["Weitere Sprache","Englisch, Türkisch …","90 €"],["Extra-Fotoshooting","ca. 1,5 Std. vor Ort","150 €"],["Weitere Gerichte fotografieren","ab Gericht 26","15 € / Stk."],["Bewertungs-Aufsteller","QR-Code für die Theke, gedruckt","29 €"],["Online-Bestellsystem","ohne Lieferando-Provision","auf Anfrage"],["Flyer & Speisekarte drucken","Design + Druckvorlage","ab 120 €"]],
+ar:[["لغة إضافية","إنجليزي، تركي …","90 €"],["جلسة تصوير إضافية","حوالي ساعة ونص بالمحل","150 €"],["تصوير أطباق إضافية","من الطبق ٢٦","15 € / طبق"],["ستاند تقييمات","QR للكاشير، مطبوع","29 €"],["نظام طلبات أونلاين","بدون عمولة ليفيراندو","حسب الطلب"],["فلاير ومنيو مطبوع","تصميم + ملف للطباعة","من 120 €"]]};
+const T={
+de:{lang:"العربية",for:"Angebot für Shawarma TOGO · Dortmund",h1:"Mehr Gäste über <em>Google, Instagram & TikTok.</em>",lead:"Eine eigene Website, starke Fotos und Social Media – alles aus einer Hand. Wähle das Paket, das zu dir passt.",
+gT:"Gratis in jedem Paket",gD:"Google-Maps-Profil optimiert: neue Titelbilder, Speisekarte & Beschreibung.",plansH:"Die Pakete",disc:"Eröffnungsrabatt",none:"Kein",
+inc:"Monatlich bei allen Paketen: Hosting, Domain, SSL-Sicherheit & kleine Änderungen (Preise, Öffnungszeiten).",once:"einmalig",mo:"+ {m} € / Monat",min:" · mind. 3 Monate",rec:"EMPFOHLEN",pick:"Auswählen",picked:"✓ Ausgewählt",
+roiH:"Rechnet sich das?",roiS:"Schieb die Regler – so schnell hat sich das Paket bezahlt gemacht.",l1:"Zusätzliche Kunden pro Tag",l2:"Durchschnittlicher Bon",l3:"Öffnungstage pro Monat",rA:"Zusätzlicher Umsatz pro Monat",
+pay:"Paket {p} ist nach ca. <b>{w}</b> wieder drin.",wk:"{n} Wochen",wk1:"1 Woche",
+addH:"Extras",addS:"Zu jedem Paket dazubuchbar.",stH:"So läuft's ab",stS:"Von heute bis online in etwa 2 Wochen.",
+st:[["Paket wählen","Heute: wir legen gemeinsam fest, was du brauchst."],["Fotoshooting","Ich komme vorbei – zu einer ruhigen Zeit, ohne Störung."],["Entwurf in 7 Tagen","Du siehst alles vorab und gibst Feedback."],["Online!","Website live, Profile eingerichtet, Google optimiert."]],
+tH:"Fair & transparent",tr:["50 % Anzahlung, Rest bei Fertigstellung","2 Korrekturrunden inklusive","Domain & Fotos gehören dir","Monatlich kündbar (Rundum: nach 3 Monaten)","Ein fester Ansprechpartner – auch auf Arabisch","Keine versteckten Kosten"],
+cH:"Bereit, sichtbar zu werden?",cP:"Schau dir die Demo-Website an, die schon für dich vorbereitet ist.",b1:"Demo-Website ansehen",sum:"Deine Wahl: {p} · {o} € einmalig + {m} € / Monat",vat:"Angebot gültig 30 Tage"},
+ar:{lang:"Deutsch",for:"عرض خاص لـ Shawarma TOGO · دورتموند",h1:"زبائن أكتر عن طريق <em>غوغل، إنستغرام وتيك توك.</em>",lead:"موقع خاص فيك، صور قوية وسوشال ميديا – كلو من مكان واحد. اختار الباقة اللي بتناسبك.",
+gT:"مجاناً مع كل باقة",gD:"تحسين بروفايل غوغل ماب: صور جديدة، منيو ووصف.",plansH:"الباقات",disc:"خصم الافتتاح",none:"بدون",
+inc:"شهرياً بكل الباقات: الاستضافة، الدومين، الحماية SSL وتعديلات صغيرة (أسعار، أوقات الدوام).",once:"مرة وحدة",mo:"+ {m} € / شهرياً",min:" · أقل شي ٣ شهور",rec:"منصح فيها",pick:"اختار",picked:"✓ تم الاختيار",
+roiH:"بتجيب همّها؟",roiS:"حرّك المؤشرات – وشوف بأي سرعة بترجعلك تكلفة الباقة.",l1:"زبائن زيادة باليوم",l2:"متوسط الفاتورة",l3:"أيام الشغل بالشهر",rA:"دخل إضافي بالشهر",
+pay:"باقة {p} بترجع حقها بعد حوالي <b>{w}</b>.",wk:"{n} أسابيع",wk1:"أسبوع واحد",
+addH:"إضافات",addS:"ممكن تضيفها لأي باقة.",stH:"كيف بنشتغل",stS:"من اليوم لحد ما يصير أونلاين بحوالي أسبوعين.",
+st:[["اختار الباقة","اليوم: منحدد سوا شو بتحتاج."],["جلسة التصوير","بجي لعندك بوقت هادي، بدون ما أعطّل الشغل."],["مسودة خلال ٧ أيام","بتشوف كل شي قبل وبتعطيني رأيك."],["أونلاين!","الموقع شغال، الحسابات جاهزة، غوغل محسّن."]],
+tH:"واضح وعادل",tr:["٥٠٪ دفعة أولى، والباقي عند التسليم","جولتين تعديلات ضمن السعر","الدومين والصور ملكك","إلغاء شهري (Rundum: بعد ٣ شهور)","شخص واحد بتتواصل معه – وبالعربي","بدون تكاليف مخفية"],
+cH:"جاهز تصير ظاهر أكتر؟",cP:"شوف الموقع التجريبي اللي جهزته إلك.",b1:"شوف الموقع التجريبي",sum:"اختيارك: {p} · {o} € مرة وحدة + {m} € / شهرياً",vat:"العرض صالح ٣٠ يوم"}};
+const PEN=[
+{d:"Your own website – professional and perfect on mobile.",f:["Modern website (mobile & desktop)","Menu, opening hours, map","Call & WhatsApp buttons","WhatsApp pre-ordering","German + Arabic","Legal notice & privacy policy (GDPR)"]},
+{d:"Website plus a strong start on Instagram & TikTok.",plus:"Everything in Start",f:["On-site photo shoot (2 hrs)","Instagram & TikTok setup","Profile, bio, highlights, link","3 posts per platform"]},
+{d:"Every dish in its best light – on your website, Google & social media.",plus:"Everything in Sichtbar",f:["Professional photos of the whole menu (up to 25 dishes)","Menu with photos on the website","QR-code menu for the tables","New photos on your Google profile too"]},
+{d:"You cook, I take care of your online presence.",plus:"Everything in Premium",f:["8 posts per month (4 of them Reels/TikToks)","Monthly on-site content shoot","Replies to comments & reviews","Short monthly report"]}];
+P.forEach((p,i)=>p.en=PEN[i]);
+AD.en=[["Extra language","English, Turkish …","90 €"],["Extra photo shoot","approx. 1.5 hrs on site","150 €"],["Additional dish photos","from dish 26","15 € / dish"],["Review stand","Printed QR code for the counter","29 €"],["Online ordering system","no delivery-platform commission","on request"],["Flyer & printed menu","Design + print-ready file","from 120 €"]];
+T.en={for:"Offer for Shawarma TOGO · Dortmund",h1:"More guests through <em>Google, Instagram & TikTok.</em>",lead:"Your own website, great photos and social media – all from one place. Pick the package that suits you.",
+gT:"Free with every package",gD:"Google Maps profile optimised: new cover photos, menu & description.",plansH:"Packages",disc:"Launch discount",none:"None",
+inc:"Monthly on every package: hosting, domain, SSL security & small changes (prices, opening hours).",once:"one-time",mo:"+ {m} € / month",min:" · min. 3 months",rec:"RECOMMENDED",pick:"Select",picked:"✓ Selected",
+roiH:"Does it pay off?",roiS:"Move the sliders – see how quickly the package pays for itself.",l1:"Extra customers per day",l2:"Average order",l3:"Open days per month",rA:"Extra revenue per month",
+pay:"The {p} package pays for itself in about <b>{w}</b>.",wk:"{n} weeks",wk1:"1 week",
+addH:"Extras",addS:"Can be added to any package.",stH:"How it works",stS:"From today to online in about 2 weeks.",
+st:[["Choose a package","Today: we decide together what you need."],["Photo shoot","I come by at a quiet time, without disrupting business."],["Draft in 7 days","You see everything first and give feedback."],["Online!","Website live, profiles set up, Google optimised."]],
+tH:"Fair & transparent",tr:["50 % deposit, the rest on completion","2 rounds of revisions included","The domain & photos belong to you","Cancel monthly (Rundum: after 3 months)","One fixed contact person – also in Arabic","No hidden costs"],
+cH:"Ready to be seen?",cP:"Take a look at the demo website already prepared for you.",b1:"View demo website",sum:"Your choice: {p} · {o} € one-time + {m} € / month",vat:"Offer valid for 30 days"};
+let L="de",D=0,S=2,H=false;
+const $=s=>document.querySelector(s),f=n=>n.toLocaleString("de-DE"),price=p=>D?Math.round(p.one*(1-D/100)/10)*10:p.one;
+function render(){
+ const t=T[L];document.documentElement.lang=L;document.documentElement.dir=L=="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);
+ document.querySelectorAll("[data-h]").forEach(e=>e.innerHTML=t[e.dataset.h]);
+ document.querySelectorAll("#langs button").forEach(b=>b.classList.toggle("on",b.dataset.l==L));document.body.classList.toggle("disc",D>0);const dc=$("#disc");dc.classList.toggle("hid",H);dc.classList.toggle("gone",H&&!D);
+ dc.innerHTML=H?(D?`<span class="dbadge">${t.disc} <b>−${D}% ✓</b></span>`:""):`<span>${t.disc}</span><div class="seg">${[0,10,15,20].map(v=>`<button class="${v==D?"on":""}" onclick="D=${v};render()">${v?"−"+v+"%":t.none}</button>`).join("")}</div><button class="lock" onclick="H=true;render()" aria-label="OK">✓</button>`;
+ $("#plans").innerHTML=P.map((p,i)=>{const x=p[L];return `<div class="plan${p.rec?" rec":""}${i==S?" sel":""}" onclick="S=${i};render()">
+ ${p.rec?`<span class="badge">${t.rec}</span>`:""}<span class="num">0${i+1}</span><h3 class="serif">${p.n}</h3><p class="muted">${x.d}</p>
+ <div class="price"><span class="now">${f(price(p))} €</span><s>${f(p.one)} €</s><span class="once">${t.once}</span></div>
+ <div class="mo"><b>${t.mo.replace("{m}",p.mo)}</b>${p.min?t.min:""}</div>
+ <ul>${x.plus?`<li class="plus">${x.plus}</li>`:""}${x.f.map(z=>`<li>${z}</li>`).join("")}</ul>
+ <div class="pick"><span>${i==S?t.picked:t.pick}</span></div></div>`}).join("");
+ $("#adds").innerHTML=AD[L].map(a=>`<div class="add"><span>${a[0]}<small>${a[1]}</small></span><b>${a[2]}</b></div>`).join("");
+ $("#steps").innerHTML=t.st.map(s=>`<div class="step"><h4>${s[0]}</h4><p>${s[1]}</p></div>`).join("");
+ $("#terms").innerHTML=t.tr.map(s=>`<div>${s}</div>`).join("");
+ const p=P[S];$("#sum").textContent=t.sum.replace("{p}",p.n).replace("{o}",f(price(p))).replace("{m}",p.mo);
+ roi();
+}
+function roi(){
+ const t=T[L],a=+$("#r1").value,b=+$("#r2").value,c=+$("#r3").value;
+ $("#v1").textContent=a;$("#v2").textContent=b+" €";$("#v3").textContent=c;
+ const rev=a*b*c;$("#rev").textContent=f(rev)+" €";
+ const p=P[S],cost=price(p)+p.mo*3,perWeek=(rev-p.mo)/4.33;
+ const w=Math.max(1,Math.ceil(cost/Math.max(perWeek,1)));
+ $("#pay").innerHTML=t.pay.replace("{p}",p.n).replace("{w}",w==1?t.wk1:t.wk.replace("{n}",w));
+}
+["#r1","#r2","#r3"].forEach(s=>$(s).oninput=roi);
+
+document.querySelectorAll("#langs button").forEach(b=>b.onclick=()=>{L=b.dataset.l;render()});
+(()=>{let tm;const on=e=>{if(!H)return;tm=setTimeout(()=>{H=false;render()},700)},off=()=>clearTimeout(tm);
+[$("#disc"),document.querySelector(".bar h2")].forEach(el=>{el.addEventListener("pointerdown",on);["pointerup","pointerleave","pointercancel"].forEach(ev=>el.addEventListener(ev,off));el.addEventListener("contextmenu",e=>{if(H)e.preventDefault()})});})();
+render();
+</script>
+</body>
+</html>
